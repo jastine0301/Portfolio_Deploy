@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+       .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+       
+       .btn-download-re button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    opacity: 0; 
+    animation: fadeUp 1.5s ease-out forwards, upDown 5s ease-in-out infinite 1.5s;
+}
+.cnt-content-tf .hdr-txt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 30px 100px;
+}
+.hdr-txt .link-a a {
+    margin: 40px;
+    text-decoration: none;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    color:#000;
+    transition: all ease .5s;
+}  
+.link-a a:hover {
+    text-shadow: 5px 5px 5px #A9E76F;
+    transition: all ease .5s;
+    font-size: 17px;
+    font-weight: 700;
+    color: #142850;
+}
+.hdr-txt h1 {
+    color: #142850;
+}
+.hdr-txt b {
+    color: #A9E76F;
+}
+
+.dv-l1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 120px;
+
+}
+.hd-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 30px 100px;
+}
+.hd-text h1 {
+    font-size: 27px;
+    color: #142850;
+}
+.hd-text b {
+    color: #A9E76F;
+}
+.bx-dex1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative; /* Makes sure transform works */
+    transition: all 0.3s ease-in-out;
+} 
+
+.bx-dex1:hover {
+    transform: translateY(-10px); /* Moves up slightly */
+    box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.3); /* Adds depth effect */
+}
+
+    .btn-re{
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: all ease .5s;
+}
+.btn-re:hover {
+    background: #2c6e2e;
+    transition: all ease .5s;
+}
+.area-img img {
+    border-radius: 10px;
+}
+.btn-re .bx-chevron-right {
+    font-size: 25px;
+
+}
+.area-text p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #9C9C9C;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+@media (max-width:1068px) {
+    #project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+     }
+     #project h1 {
+        display: flex;
+        flex-direction: row;
+     }
+     .link-a {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+
+     }
+     .link-a a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+     }
+     .dv-l1 {
+        display: flex;
+        flex-direction: column;
+     }
+     .bx-dex1 {
+        margin-bottom: 50px;
+     }
+     .bx-dex1 .area-img img {
+        max-width: 430px;
+     }
+}
+
+@media (max-width:  523px) {
+    #project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+     }
+     .hdr-txt .link-a a {
+        margin: 0;
+        background-color: #A9E76F9E;
+        margin-top: 25px;
+        text-shadow: none;
+        width: 320px;
+        border-radius: 8px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+        height: 11vh;
+     }
+     .link-a a:hover {
+        transition: all ease .3s;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+     }
+     #project h1 {
+        display: flex;
+        flex-direction: row;
+     }
+     .link-a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+     }
+     .link-a a {
+        padding: -20px;
+     }
+     .dv-l1 {
+        display: flex;
+        flex-direction: column;
+     }
+     .bx-dex1 {
+        margin-bottom: 50px;
+     }
+     .bx-dex1 .area-img img {
+        max-width: 300px;
+     }
+     #hdtext {
+        font-size: 16px;
+        margin-top: 20px;
+     }
+     .dv-l1 {
+        padding: 30px 30px;
+    }
+    .star-icon .bx {
+        font-size: 20px;
+    }
+}
+@media (max-width: 340px) {
+    .ctn-b-t {
+        padding: 1px 0  rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="mbg-body">
+        <nav>
+            <div class="nvb-header">
+                <div class="txtn-text">
+                    <h1>Tundag, Jastine Marie</h1>
+                </div>
+
+                <div class="icn-link">
+                    <div class="link"><a href="index.html">Home</a></div>
+                    <div class="link"><a href="about.html">About Me</a></div>
+                    <div class="link active"><a href="#project">Project</a></div>
+                    <div class="link"><a href="contact.html">Get in Touch</a></div>
+                    <div class="link"><a href="#testimonials">Testimonials</a></div>
+                </div>
+                <i class='bx bx-menu' id="menu-icon"></i>
+            </div>
+        </nav>
+
+        <div class="dropdown" id="dropdown">
+            <i class='bx bx-x' id="x-menu"></i>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html#project">Project</a>
+                <a href="contact.html">Get in Touch</a>
+                <a href="projects.html#testimonials">Testimonials</a>
+            </div>
+        </div>
+        </nav>
+
+
+        <div class="cnt-content-tf">
+         
+        <!--COLUMN DIV-->
+        <div class="hdr-txt fade-up" id="project">
+            <h1>My <b>Work</b> </h1>
+            
+            <div class="link-a">
+            <a href="#project" class="a-on">Web Designs</a>
+            <a href="#logo">Logo's</a>
+            <a href="#menus">Menus</a>
+            <a href="#webapp">Apps</a>
+        </div>
+        </div>
+        <div class="dv-l1">
+            <!--ROW BOX DIV-->
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/project1.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1>Dental Care System</h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/project2.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1>Jasie’s Beauty Salon</h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+        </div>
+        <div class="hd-text fade-up" id="logo">
+            <h1>
+                Logo <b>Samples</b>
+            </h1>
+        </div>
+
+        <div class="dv-l1">
+            <!--ROW BOX DIV-->
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/logosample1.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1>Jasie’s Yum </h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/logosample2.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1>Restaurant Catering</h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="hd-text fade-up" id="menus">
+            <h1>
+                Menu <b>Samples</b>
+            </h1>
+        </div>
+
+        <div class="dv-l1">
+            <!--ROW BOX DIV-->
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/menusample.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1>Vintage Samples</h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/menusample1.jpg" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1 style="font-size: 26px;">Aesthetic Samples</h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+
+        </div>
+
+        <div class="hd-text fade-up" id="webapp">
+            <h1>
+                Web App <b>Samples</b>
+            </h1>
+        </div>
+
+        <div class="dv-l1">
+            <!--ROW BOX DIV-->
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/webapps.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1>Jasie’s Yum </h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+            <div class="bx-dex1 fade-up">
+                <div class="area-img">
+                <img src="img/webapps1.png" alt="images" style="height: 230px; width: 430px; cursor: pointer;">
+               </div>
+               <div class="area-text">
+                <h1 style="font-size: 26px;">Catering Services/Restaurant</h1>
+                <p>Solving user & business problems since last 15+ years.</p>
+                <button class="btn-re">Know More <i class='bx bx-chevron-right'></i></button>
+               </div>
+            </div>
+
+
+        </div>
+
+        
+        <div class="hd-text fade-up">
+            <h1 id="testimonials" style="color: #A9E76F;">
+                Testimonials
+            </h1>
+
+
+        </div>
+        <button class="scroll-to-top" id="scrollToTopBtn"><i class='bx bxs-up-arrow-alt'></i></button>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) { // Show button after scrolling 200px
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+        </script>
+        
+        <div class="ctn-b-t">
+                
+            <div class="h-icon">
+                <i class='bx bxs-quote-left'></i>
+            </div>
+            <div class="dv-border-gradient">
+                <div class="dv-box-t">
+                    <p class="par-view">
+                        I’m currently working with Jastine Tundag, and I’m really impressed with the design it’s clean, modern, and very easy to navigate. Everything feels organized and smooth, making the whole experience enjoyable. Amazing work!
+                    </p>
+                    <div class="dv-footer">
+                        <div class="img-ht">
+                            <img src="img/chriz.jpg" alt="" style="height: 90px; width: 90px; margin-right: 10px; border-radius: 50%;">
+                            <h2 id="hdtext">Jun Christopher Sintos</h2>
+                        </div>
+                        <div class="star-icon">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+                    <p class="par-mobile-view">
+                        I’m currently working with Jastine Tundag, and I’m really impressed with the design it’s clean, modern, and very easy to navigate. Everything feels organized and smooth, making the whole experience enjoyable. Amazing work!
+                    </p>
+                </div>
+            </div>
+            <br>
+             <br>
+              <br>
+               <br>
+                <br>
+
+            <div class="h-icon">
+                <i class='bx bxs-quote-left'></i>
+            </div>
+            <div class="dv-border-gradient">
+                <div class="dv-box-t">
+                    <p class="par-view">
+                        The UI is very well crafted simple, elegant, and easy to navigate. Every element feels thoughtfully designed, creating a smooth and enjoyable experience.
+                    </p>
+                    <div class="dv-footer">
+                        <div class="img-ht">
+                            <img src="img/default.jpg" alt="" style="height: 90px; width: 90px; margin-right: 10px; border-radius: 50%;">
+                            <h2 id="hdtext">Unkown  </h2>
+                        </div>
+                        <div class="star-icon">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+                    <p class="par-mobile-view">
+                        The UI is very well crafted simple, elegant, and easy to navigate. Every element feels thoughtfully designed, creating a smooth and enjoyable experience.
+                    </p>
+                </div>
+            </div>  
+            
+            </div>
+        </div>
+    
+        </div>
+    <footer>
+        <h4>
+            Copyright @2025 All rights reserved
+        </h4>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-up");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+});
+
+    </script>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

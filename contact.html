@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        .hd-txtx {
+            margin-bottom: 20px;
+        }
+        .cnt-right img {
+            border-radius: 50%;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+        }
+        .link-gmail {
+            color: #3482FF;
+        }
+        .icn-link-to a {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 10px;
+            transition: all ease .5s;
+        }
+        .icn-link-to .bx{
+            font-size: 32px;
+            transition: all ease .5s;
+            padding: 5px;
+        }
+        .bxl-whatsapp {
+            color: #25D366;
+        }
+        .bxl-facebook-circle {
+            color: #1877F2;
+        }
+        .bxl-linkedin {
+            color: #1877F2;
+        }
+        .bxl-behance {
+            color: #1769FF;
+        }
+        .btn-download-re button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .mb-view {
+            display: none;
+        }
+         /* Responsive Design */
+ @media (max-width: 966px) {
+    .main-view  {
+        display: none;
+    }
+    .mb-view {
+        display: flex;
+        flex-direction: column;   
+     }
+     .cnt-left img {
+        width: 100%;
+        max-height: 300px;
+        max-width: 300px;
+        border-radius: 50%;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+
+     .btn-download-re {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .btn-download-re button {
+        font-size: 13px;
+     }
+     .icn-link-to {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .cnt-content {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     .cnt-right h1 {
+         font-size: 36px;
+     }
+     .icn-link-to {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+ }
+ @media (max-width:321px) {
+    .txtn-text h1 {
+        font-size: 13px;
+        margin-right: 30px;
+    }
+    .icn-link-to a {
+            font-size: 11px;
+            margin: 5px;
+        }
+        .icn-link-to .bx{
+            font-size: 20px;
+        }
+        .cnt-left img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        .cnt-right p {
+            font-size: 13px;
+        }
+ }
+ @keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    opacity: 0; 
+    animation: fadeUp 1.5s ease-out forwards, upDown 5s ease-in-out infinite 1.5s;
+}
+    </style>
+</head>
+<body>
+
+    <div class="mbg-body">
+        <nav>
+            <div class="nvb-header">
+                <div class="txtn-text">
+                    <h1>Tundag, Jastine Marie</h1>
+                </div>
+
+                <div class="icn-link">
+                    <div class="link"><a href="index.html">Home</a></div>
+                    <div class="link"><a href="about.html">About Me</a></div>
+                    <div class="link"><a href="projects.html#project">Project</a></div>
+                    <div class="link active"><a href="contact.html">Get in Touch</a></div>
+                    <div class="link"><a href="projects.html#testimonials">Testimonials</a></div>
+                </div>
+                <i class='bx bx-menu' id="menu-icon"></i>
+            </div>
+        </nav>
+
+        <div class="dropdown" id="dropdown">
+            <i class='bx bx-x' id="x-menu"></i>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html#project">Project</a>
+                <a href="contact.html">Get in Touch</a>
+                <a href="projects.html#testimonials">Testimonials</a>
+            </div>
+        </div>
+        </nav>
+
+        <!---MObile view-->
+        <div class="cnt-content mb-view">
+            <div class="cnt-left">
+
+                <img src="img/me.jpg" alt="" height="400" style="width: 400px;" class="animate">
+
+
+            </div>
+            <div class="cnt-right">
+                <h1 class="fade-up hd-txtx" style="animation-delay: 0.2s;"> <b id="clr"> CONTACT </b> ME  </h1>
+                <p class="fade-up" style="animation-delay: 0.3s;">
+                    For job opportunities or collaborations and inquiries, please email me at <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tundagjastinemarie@gmail.com" target="_blank" class="link-gmail">
+                        tundagjastinemarie@gmail.com
+                    </a>
+                     or You can connect with me in my socials. <br><br>
+
+Phone: +63 9222145524
+
+
+                </p>
+                <div class="btn-download-re">
+                    <button id="download-btn-1">Download Resume <i class='bx bx-chevron-right'></i></button>
+                </div>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const downloadBtn = document.getElementById("download-btn-1");
+                
+                        downloadBtn.addEventListener("click", function() {
+                            downloadBtn.innerHTML = "Downloading...";
+                            downloadBtn.style.opacity = "0.6";
+                
+                            const filePath = "OJT, CV Resume.pdf"; // Ensure this path is correct
+                            const fileName = "OJT_CV_Resume.pdf";
+                            
+                            const link = document.createElement("a");
+                            link.href = filePath;
+                            link.download = fileName;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                
+                            setTimeout(() => {
+                                downloadBtn.innerHTML = "Downloaded";
+                                downloadBtn.style.opacity = "1";
+                                
+                                // Automatically open the downloaded file
+                                window.open(filePath, "_blank");
+                
+                                setTimeout(() => {
+                                    downloadBtn.style.opacity = "0.6";
+                                    downloadBtn.innerHTML = "Download Resume <i class='bx bx-chevron-right'></i>";
+                                    setTimeout(() => {
+                                        downloadBtn.style.opacity = "1";
+                                    }, 500);
+                                }, 3000);
+                            }, 2000);
+                        });
+                    });
+                </script>
+                
+
+<div class="icn-link-to">
+    <a href="https://www.facebook.com/jastinetundag" target="_blank"><i class='bx bxl-facebook-circle'></i>Facebook</a>
+    <a href="#" target="_blank"><i class='bx bxl-twitter' style="color: #1877F2;"></i>Twitter</a>
+    <a href="https://www.linkedin.com/in/jastine-marie-tundag-a30b542a1/" target="_blank"><i class='bx bxl-linkedin' ></i>LinkedIn</a>
+    <a href="https://www.behance.net/jastinetundag/projects" target="_blank"><i class='bx bxl-behance' ></i>Behance</a>   
+
+</div>
+            </div>
+        </div>
+    </div>
+        
+
+
+        <div class="cnt-content main-view">
+            <div class="cnt-left">
+
+
+                <h1 class="fade-up hd-txtx" style="animation-delay: 0.2s;"> <b id="clr"> CONTACT </b> ME  </h1>
+                <p class="fade-up" style="animation-delay: 0.3s;">
+                    For job opportunities or collaborations and inquiries, please email me at <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tundagjastinemarie@gmail.com" target="_blank" class="link-gmail">
+                        tundagjastinemarie@gmail.com
+                    </a>
+                     or You can connect with me in my socials. <br><br>
+
+Phone: +63 9222145524
+
+
+                </p>
+            
+                <div class="btn-download-re">
+                    <button id="download-btn">Download Resume <i class='bx bx-chevron-right'></i></button>
+                </div>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const downloadBtn = document.getElementById("download-btn");
+                
+                        downloadBtn.addEventListener("click", function() {
+                            downloadBtn.innerHTML = "Downloading...";
+                            downloadBtn.style.opacity = "0.6";
+                
+                            const filePath = "OJT, CV Resume.pdf"; // Ensure this path is correct
+                            const fileName = "OJT_CV_Resume.pdf";
+                            
+                            const link = document.createElement("a");
+                            link.href = filePath;
+                            link.download = fileName;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                
+                            setTimeout(() => {
+                                downloadBtn.innerHTML = "Downloaded";
+                                downloadBtn.style.opacity = "1";
+                                
+                                // Automatically open the downloaded file
+                                window.open(filePath, "_blank");
+                
+                                setTimeout(() => {
+                                    downloadBtn.style.opacity = "0.6";
+                                    downloadBtn.innerHTML = "Download Resume <i class='bx bx-chevron-right'></i>";
+                                    setTimeout(() => {
+                                        downloadBtn.style.opacity = "1";
+                                    }, 500);
+                                }, 3000);
+                            }, 2000);
+                        });
+                    });
+                </script>
+                    
+            
+                           <div class="icn-link-to">
+                               <a href="https://www.facebook.com/jastinetundag" target="_blank"><i class='bx bxl-facebook-circle'></i>Facebook</a>
+                               <a href="https://x.com/?logout=1744618837387" target="_blank"><i class='bx bxl-twitter' style="color: #1877F2;"></i>Twitter</a>
+                               <a href="https://www.linkedin.com/in/jastine-marie-tundag-a30b542a1/" target="_blank"><i class='bx bxl-linkedin' ></i>LinkedIn</a>
+                               <a href="https://www.behance.net/jastinetundag/projects" target="_blank"><i class='bx bxl-behance' ></i>Behance</a>   
+
+                           </div>
+
+
+            </div>
+            <div class="cnt-right">
+                <img src="img/me.jpg" alt="" height="400" style="width: 400px;" class="animate">
+                </div>
+            </div>
+    </div>
+    <footer>
+        <h4>
+            Copyright @2025 All rights reserved
+        </h4>
+    </footer>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

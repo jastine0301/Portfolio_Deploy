@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+         .cnt-left {
+    background: #A9E76F;
+    padding: 30px;
+    width: 200px;
+    margin-right: 120px;
+    margin-left: 10px;
+ }
+
+ .cnt-left img {
+    position: relative;
+    left: 5px;
+     width: 100%;
+     max-width: 400px;
+     box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.5);
+ }
+ .hd-txt {
+    margin-left: 175px;
+ }
+ /* Responsive Design */
+ @media (max-width: 880px) {
+    .hd-txt {
+    margin-left: 0px;
+ }
+ }
+
+@media (max-width: 768px) {
+    .hd-txt  {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .cnt-right h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+@media (max-width:376px) {
+    .cnt-right p {
+        width: 250px;
+    }
+ }
+ @keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    opacity: 0; 
+    animation: fadeUp 1.5s ease-out forwards, upDown 5s ease-in-out infinite 1.5s;
+}
+    </style>
+</head>
+<body>
+
+    <div class="mbg-body">
+        <nav>
+            <div class="nvb-header">
+                <div class="txtn-text">
+                    <h1>Tundag, Jastine Marie</h1>
+                </div>
+
+                <div class="icn-link">
+                    <div class="link"><a href="index.html">Home</a></div>
+                    <div class="link active"><a href="about.html">About Me</a></div>
+                    <div class="link"><a href="projects.html#project">Project</a></div>
+                    <div class="link"><a href="contact.html">Get in Touch</a></div>
+                    <div class="link"><a href="projects.html#testimonials">Testimonials</a></div>
+                </div>
+                <i class='bx bx-menu' id="menu-icon"></i>
+            </div>
+        </nav>
+
+        <div class="dropdown" id="dropdown">
+            <i class='bx bx-x' id="x-menu"></i>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html#project">Project</a>
+                <a href="contact.html">Get in Touch</a>
+                <a href="projects.html#testimonials">Testimonials</a>
+            </div>
+        </div>
+        </nav>
+
+
+        <div class="cnt-content">
+            <div class="cnt-left">
+
+                <img src="img/aboutimg.jpg" alt="" height="350" style="width: 280px;" class="animate">
+
+
+            </div>
+            <div class="cnt-right">
+                    <h4 class="fade-up hd-txt" style="animation-delay: 0.1s;">Who am I?</h4>
+                <h1 class="fade-up" style="animation-delay: 0.2s;"> <b id="clr"> Hello </b> There,  </h1>
+    <p class="fade-up" style="animation-delay: 0.3s; font-size: 14px;">I'm Jastine, a Cebu-based UI/UX Designer with a strong passion for creating intuitive and visually compelling digital experiences. <br><br> 
+
+        With expertise in Figma and User-Centered Design, I focus on crafting seamless interfaces that enhance user engagement and functionality. <br><br>
+        
+        My approach blends creativity with strategic problem-solving to deliver designs that are both aesthetically pleasing and highly functional.<br><br>
+        
+        Dedicated to staying ahead of industry trends, I continuously refine my skills to create innovative and user-friendly solutions</p>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>
+            Copyright @2025 All rights reserved
+        </h4>
+    </footer>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
